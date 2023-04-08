@@ -4,4 +4,5 @@ Dibuat untuk arsip tugas PBO 4D dan untuk memenuhi tugas mata kuliah PBO dalam b
 
 ## Todo
 - [ ] Python
+- [ ] Rust
 - [ ] Unit Tests

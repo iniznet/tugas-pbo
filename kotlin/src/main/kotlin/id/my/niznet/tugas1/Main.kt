@@ -6,59 +6,29 @@ object Main {
         val mahasiswas = ArrayList<Mahasiswa>()
         val dosens = ArrayList<Dosen>()
 
-        val mhs1 = Mahasiswa()
-        mhs1.nim = "111"
-        mhs1.nama = "Bayu"
-        mhs1.jurusan = "Informatika"
-        val mhs2 = Mahasiswa()
-        mhs2.nim = "222"
-        mhs2.nama = "Beni"
-        mhs2.jurusan = "Kimia"
-        val mhs3 = Mahasiswa()
-        mhs3.nim = "333"
-        mhs3.nama = "Reza"
-        mhs3.jurusan = "Filsafat"
-        val mhs4 = Mahasiswa()
-        mhs4.nim = "444"
-        mhs4.nama = "Rahmat"
-        mhs4.jurusan = "Biologi"
-        val mhs5 = Mahasiswa()
-        mhs5.nim = "555"
-        mhs5.nama = "Roni"
-        mhs5.jurusan = "Matematika"
+        val mahasiswaNims = arrayOf("111", "222", "333", "444", "555")
+        val mahasiswaNames = arrayOf("Bayu", "Beni", "Reza", "Rahmat", "Roni")
+        val mahasiswaJurusans = arrayOf("Informatika", "Kimia", "Filsafat", "Biologi", "Matematika")
 
-        mahasiswas.add(mhs1)
-        mahasiswas.add(mhs2)
-        mahasiswas.add(mhs3)
-        mahasiswas.add(mhs4)
-        mahasiswas.add(mhs5)
+        val dosenNidns = arrayOf("111", "222", "333", "444", "555")
+        val dosenNames = arrayOf("Asep", "Bobon", "Candra", "Deden", "Endra")
+        val dosenSpesialises = arrayOf("Rekayasa Perangkat Lunak", "Jaringan Komputer", "Sains Data", "Pemrograman Mobile", "Basis Data")
 
-        val dsn1 = Dosen()
-        dsn1.nidn = "111"
-        dsn1.nama = "Asep"
-        dsn1.spesialis = "Rekayasa Perangkat Lunak"
-        val dsn2 = Dosen()
-        dsn2.nidn = "222"
-        dsn2.nama = "Bobon"
-        dsn2.spesialis = "Jaringan Komputer"
-        val dsn3 = Dosen()
-        dsn3.nidn = "333"
-        dsn3.nama = "Candra"
-        dsn3.spesialis = "Sains Data"
-        val dsn4 = Dosen()
-        dsn4.nidn = "444"
-        dsn4.nama = "Deden"
-        dsn4.spesialis = "Pemrograman Mobile"
-        val dsn5 = Dosen()
-        dsn5.nidn = "555"
-        dsn5.nama = "Endra"
-        dsn5.spesialis = "Basis Data"
+        for (i in mahasiswaNims.indices) {
+            val mhs = Mahasiswa()
+            mhs.nim = mahasiswaNims[i]
+            mhs.nama = mahasiswaNames[i]
+            mhs.jurusan = mahasiswaJurusans[i]
+            mahasiswas.add(mhs)
+        }
 
-        dosens.add(dsn1)
-        dosens.add(dsn2)
-        dosens.add(dsn3)
-        dosens.add(dsn4)
-        dosens.add(dsn5)
+        for (i in dosenNidns.indices) {
+            val dsn = Dosen()
+            dsn.nidn = dosenNidns[i]
+            dsn.nama = dosenNames[i]
+            dsn.spesialis = dosenSpesialises[i]
+            dosens.add(dsn)
+        }
 
         for (i in mahasiswas.indices) {
             val mhs = mahasiswas[i]
@@ -74,6 +44,8 @@ object Main {
 
             println("----------------------")
         }
+
+        println()
 
         for (i in dosens.indices) {
             val dsn = dosens[i]
